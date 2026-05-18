@@ -1,5 +1,3 @@
-import React from 'react';
-
 function Cart({ cartItems, onRemoveFromCart, onUpdateQuantity }) {
   const calculateTotal = () => {
     return cartItems.reduce((total, item) => total + (item.price * item.quantity), 0);
@@ -43,6 +41,9 @@ function Cart({ cartItems, onRemoveFromCart, onUpdateQuantity }) {
         }}>
           <div style={{ flex: 2 }}>
             <strong>{item.name}</strong>
+            <p style={{ fontSize: '14px', opacity: 0.7, margin: '8px 0 0' }}>
+              {item.name} is in your cart.
+            </p>
             <span style={{ fontSize: '14px', opacity: 0.7, marginLeft: '10px' }}>
               (${item.price.toFixed(2)} each)
             </span>

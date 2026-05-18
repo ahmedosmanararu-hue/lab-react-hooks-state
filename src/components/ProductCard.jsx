@@ -5,6 +5,8 @@ function ProductCard({ product, onAddToCart }) {
   return (
     <div 
       data-testid={`product-${product.id}`}
+      role="button"
+      onClick={() => onAddToCart(product)}
       style={{
         border: '1px solid var(--border-color)',
         borderRadius: '8px',
@@ -26,7 +28,10 @@ function ProductCard({ product, onAddToCart }) {
         {product.category}
       </p>
       <button 
-        onClick={() => onAddToCart(product)}
+        onClick={(event) => {
+          event.stopPropagation();
+          onAddToCart(product);
+        }}
         style={{
           padding: '8px 16px',
           backgroundColor: 'var(--primary-color)',

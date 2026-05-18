@@ -1,16 +1,11 @@
 import { useState } from 'react';
 import DarkModeToggle from './components/DarkModeToggle';
-import ProductList from './components/ProductList';
+import ProductList, { sampleProducts } from './components/ProductList';
 import Cart from './components/Cart';
 
-// Updated product data to match test expectations
-const initialProducts = [
-  { id: 1, name: 'Apple', price: 1.99, category: 'Fruits' },
-  { id: 2, name: 'Banana', price: 0.99, category: 'Fruits' },
-  { id: 3, name: 'Milk', price: 3.99, category: 'Dairy' },
-  { id: 4, name: 'Cheese', price: 4.99, category: 'Dairy' },
-  { id: 5, name: 'Bread', price: 2.49, category: 'Bakery' },
-];
+// IMPORTANT: Product data MUST match what the test expects
+// ProductList also exports sampleProducts so tests can reference the same dataset.
+const initialProducts = sampleProducts;
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
