@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 function Cart({ cartItems, onRemoveFromCart, onUpdateQuantity }) {
   const calculateTotal = () => {
@@ -15,7 +15,7 @@ function Cart({ cartItems, onRemoveFromCart, onUpdateQuantity }) {
         textAlign: 'center',
         backgroundColor: 'var(--card-bg)'
       }}>
-        <h3>🛒 Your Cart</h3>
+        <h3>Shopping Cart</h3>
         <p>Your cart is empty. Add some products!</p>
       </div>
     );
@@ -29,7 +29,7 @@ function Cart({ cartItems, onRemoveFromCart, onUpdateQuantity }) {
       marginTop: '20px',
       backgroundColor: 'var(--card-bg)'
     }}>
-      <h3 style={{ marginBottom: '15px' }}>🛒 Your Cart</h3>
+      <h3>Shopping Cart</h3>
       
       {cartItems.map(item => (
         <div key={item.id} style={{

@@ -1,10 +1,11 @@
 import ProductCard from './ProductCard';
 
+
 function ProductList({ products, onAddToCart }) {
   if (!products || products.length === 0) {
     return (
       <div style={{ textAlign: 'center', padding: '40px' }}>
-        <p>No products found in this category.</p>
+        <p>No products available.</p>
       </div>
     );
   }
